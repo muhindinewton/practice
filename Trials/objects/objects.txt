@@ -1,0 +1,65 @@
+
+Instructions
+Great news! You've been invited to help manage the World Cup statistics. Your task is to build an object that stores team and player statistics, 
+and then create functions that can retrieve useful data.
+
+
+Part 1: Building the Object
+The first function you will define is called worldCupData. This function contains and returns an object nested in the following manner:
+
+The top level of the object has two keys: "groupA", for teams in Group A, and "groupB", for teams in Group B.
+The values of the "groupA" and "groupB" keys are objects that have:
+
+"teamName" → A string representing the team name.
+"colors" → An array of strings representing the team's colors.
+"players" → An object where the keys are player names and the values are objects containing their stats:
+Use the following data for your object
+Group A
+
+Team Name: Brazil
+Colors: Yellow, Green
+Players:
+Neymar → (Goals: 5, Assists: 3, Yellow Cards: 1, Red Cards: 0, Minutes Played: 400)
+Vinicius Jr → (Goals: 3, Assists: 4, Yellow Cards: 2, Red Cards: 0, Minutes Played: 380)
+Casemiro → (Goals: 1, Assists: 1, Yellow Cards: 3, Red Cards: 1, Minutes Played: 450)
+Group B
+
+Team Name: Argentina
+Colors: Light Blue, White
+Players:
+Messi → (Goals: 6, Assists: 5, Yellow Cards: 1, Red Cards: 0, Minutes Played: 480)
+Di Maria → (Goals: 2, Assists: 3, Yellow Cards: 2, Red Cards: 0, Minutes Played: 390)
+De Paul → (Goals: 0, Assists: 2, Yellow Cards: 4, Red Cards: 0, Minutes Played: 500)
+To check your work, call console.log(worldCupData());
+
+Part 2: Function Building
+Now, build functions that operate on the object returned by worldCupData.
+
+1. Find Goals Scored by a Player
+Write a function goalsScored(playerName) that takes a player's name as an argument and returns the number of goals scored.
+
+2. Find Minutes Played by a Player
+Write a function minutesPlayed(playerName) that takes a player's name as an argument and returns their total minutes played.
+
+3. Get Team Colors
+Write a function teamColors(teamName) that takes a team name as an argument and returns an array of that team’s colors.
+
+4. List All Team Names
+Write a function teamNames() that returns an array of all the team names in the World Cup object.
+
+5. Get Player Stats
+Write a function playerStats(playerName) that takes a player's name as an argument and returns an object of that player’s statistics.
+
+6. Most Goals Scored
+Write a function mostGoalsScored() that finds and returns the name of the player with the highest number of goals.
+
+7. Team with Most Goals
+Write a function winningTeam() that finds the team with the most goals scored (sum of all players' goals) and returns its name.
+
+8. Player with the Most Minutes Played
+Write a function mostMinutesPlayed() that finds and returns the name of the player with the most minutes played.
+
+Super Bonus
+Write a function doesTopScorerHaveMostMinutes() that returns true if the player with the most goals also played the most minutes.
+
+
