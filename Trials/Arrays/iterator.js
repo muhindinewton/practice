@@ -156,11 +156,147 @@ Array.prototype.indexOf() is called on an array and takes two arguments: the val
 // console.log(fruitList)
 
 //? use of for...of in place of .map()
-// const eggSellers = ["Jack", "Fridah", "Jere", "Nick", "Furaha"];
+// const eggSeller = ["Jack", "Fridah", "Jere", "Nick", "Furaha"];
 // const rollCall = [];
 
-// for (const names of eggSellers) {
+// for (const names of eggSeller) {
 //     rollCall.push(names + " msee wa mayai" );
 // }
 
 // rollCall;
+
+//? map() with a function declaration
+// function eggSellerRollCall(eggseller) {
+//   return eggseller + " msee wa mayai";
+
+// };
+// const names = ["Jack", "Fridah", "Jere", "Nick", "Furaha"];
+// const rollCall = names.map(eggSellerRollCall);
+
+// rollCall;
+
+//? map() wit function expression
+// const names =  ["Jack", "Fridah", "Jere", "Nick", "Furaha"];
+// const rollCall = names.map(function (student) {
+//   return student + " msee wa mayai";
+// });
+// rollCall;
+
+//? map() with an arrow function
+// const names =  ["Jack", "Fridah", "Jere", "Nick", "Furaha"]
+// const rollCall = names.map(student => student + " msee wa mayai")
+
+// rollCall
+
+//! ARRAY REDUCE METHOD
+//reduces lists to a single value; either a string, number or boolean
+//how the reduce method works
+// example: Let's say we have a bunch of grocery items in our basket and we want to calculate the total price.
+
+// const products = [
+//   { name: "Shampoo", price: 4.99 },
+//   { name: "Donuts", price: 7.99 },
+//   { name: "Cookies", price: 6.49 },
+//   { name: "Bath Gel", price: 13.99 },
+// ];
+// function getTotalAmountForProducts(products) {
+//   let totalPrice = 0;
+
+//   for (const product of products) {
+//     totalPrice += product.price;
+//   }
+//   return totalPrice;
+// }
+// console.log (getTotalAmountForProducts(products));
+
+// const couponLocations = [
+
+//   { room: "Living room", amount: 5 },
+//   { room: "Kitchen", amount: 2 },
+//   { room: "Bathroom", amount: 1 },
+//   { room: "Master bedroom", amount: 7 },
+// ];
+
+// function getTotalAmountOfCoupons(couponLocations) {
+//   let totalCoupons = 0;
+
+//   for (const couponLocation of couponLocations) {
+//     totalCoupons += couponLocation.amount;
+//   }
+//   return totalCoupons
+// }
+// const totalCoupons = getTotalAmountOfCoupons(couponLocations)
+// console.log(totalCoupons)
+
+//? writing a custom reduce function
+// function ourReduce(arr, reducer, init) {
+//   let accum = init;
+//   for (const element of arr) {
+//     accum = reducer(accum, element);
+//   }
+//   return accum;
+// }
+
+//we can use it to count coupons in different rooms
+// const couponLocations = [
+//   { room: "Living room", amount: 5 },
+//   { room: "Kitchen", amount: 2 },
+//   { room: "Bathroom", amount: 1 },
+//   { room: "Master bedroom", amount: 7 },
+// ];
+
+// function couponCounter(total, location) {
+//   return total + location.amount;
+// }
+// console.log(ourReduce(couponLocations, couponCounter, 0))
+/* 
+The ourReduce() function:
+=> Takes an array, a reducer function, and an initial value.
+=> Iterates through the array, applying the reducer function.
+=> Returns the final accumulated value.
+*/
+
+//? Using JavaScript’s Built-in reduce()
+// const couponLocations = [
+//   { room: "Living room", amount: 5 },
+//   { room: "Kitchen", amount: 2 },
+//   { room: "Bathroom", amount: 1 },
+//   { room: "Master bedroom", amount: 7 },
+// ];
+// function couponCounter(total, location) {
+//   return total + location.amount;
+// }
+// console.log(couponLocations.reduce(couponCounter, 0))
+
+// doubling and summing numbers
+// const doubledAndSummed = [1,2,3,4,5].reduce((acc, num) => acc + num*2, 0);
+// console.log(doubledAndSummed)
+// ensure to alwasy include an initial value
+
+//? using reduce() to return an object
+//counting names in an array
+// const names = ['james', 'kamau', 'maingi','ann', 'kamau', 'jere'];
+// const namesCount = names.reduce((countObj, name) => {
+//   countObj[name] = (countObj[name] || 0 ) + 1;
+//   return countObj
+// }, {}); //Initialize the accumulator as an empty object
+
+
+// console.log(namesCount);
+
+//! forEach: The Iterator of No Return
+// it doesnt have a built in return value
+// oppressedWorkers = [  
+//   "Dopey",
+//   "Sneezy",
+//   "Happy",
+//   "Angry",
+//   "Doc",
+//   "Lemonjello",
+//   "Sleepy",
+// ];
+
+// oppressedWorkers.forEach(worker => {
+//   console.log(`${worker} wants to form a union`);
+// });
+//the callback we pass to it can contain whatever functionality we like.
