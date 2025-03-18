@@ -54,3 +54,4 @@
 // console.log(evenNums)
 // console.log(oddNums)
 // console.log(total)
+
