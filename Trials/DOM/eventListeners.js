@@ -13,8 +13,10 @@ window eventrs => load
 // event lister advantage => we can have diffferent events
 
 //Create an alert
-document.querySelector('#alert').addEventListener('click', () => alert('Hi, I was clicked'))
+// document.querySelector('#alert').addEventListener('click', () => alert('Hi, I was clicked'))
 
 //log something
-document.querySelector('#log').addEventListener
-('click', () => alert('Dont do that again!'))
+// document.querySelector('#log').addEventListener
+// ('click', () => alert('Don\'t do that again!'))
+
+//
