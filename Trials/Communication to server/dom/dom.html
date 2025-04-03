@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zkpr</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <header id="menu">
+        <h1>Welcome to zkpr.</h1>
+    </header>
+
+    <div class="container">
+        <form id="animal-form">
+            <input type="text" placeholder="Name" id="name" required>
+            <input type="text" placeholder="Image URL" id="image_url" required>
+            <textarea placeholder="Description" id="description" required></textarea>
+            <button type="submit">Adopt Animal</button>
+        </form>
+        
+
+        <ul id="animal-list" class="cards">
+            <!-- Animals will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script defer src="dom.js"></script>
+    <!-- <script src="data.js"></script> -->
+</body>
+</html>

@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="eventListener.css">
 </head>
 <body>
+
     <div class="container">
         <div id="todos">
-            <h3>ToDo List</h3>
-            <h4>Thursday</h4>
+            <h3>To-Do List</h3>
+            <p id="current-date"></p> <!-- Display current date -->
             <form id="todo_form">
-                <input type="text" placeholder="New To Do">
-                <button type="submit">Submit</button>
+                <input id="new_todo" type="text" placeholder="New To-Do">
+                <button type="submit">Add Task</button>
             </form>
             <div id="todo_container">
-                <ul
-                id= "tasks"></ul>
-            </div>
-            <div>
-                <button class="btn" id="alert">Alert ME</button>
-                <button class="btn" id="log">Console Log something</button>
+                <ul id="tasks"></ul>
             </div>
         </div>
     </div>
-    <script src="eventListeners.js"></script>
+
+    <script src="eventListeners.js"></script> <!-- Link to external JS file -->
 
 </body>
 </html>

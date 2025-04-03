@@ -24,3 +24,22 @@
 //   const capitalizedStringsArray = capitalizeAllStringsInArray(tutorials);
 // console.log(capitalizedStringsArray)
 
+//! THE TERNARY OPERATOR
+//, It is a shorthand for the if...else statement
+
+// condition ? expresionIfTrue : expressionIfFalse;
+// let age = 20;
+// let votingAge = age >= 18 ? "You can vote" : "You cannot vote";
+// votingAge
+
+// let number = 4;
+// let incrementingNumber = number > 5 ? `${number-=3}` : `${number+=5}`;
+// incrementingNumber
+
+// let num = 3;
+// let result = num % 2 === 0 ? 'Even' : 'Odd'
+// result
+
+// let num = 3;
+// let result = num > 10 ? (num < 20 ? "Between 10 and 20" : "Greater than 20") : "10 or less";
+// console.log(result); 
