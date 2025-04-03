@@ -58,7 +58,7 @@ Arithmetic operators = operands (values, variables, etc)
 
 
 //. Using augmented assignment opearators
-let students = 30
+// let students = 30
 // students += 1
 // students -= 2
 // students /= 4
@@ -171,7 +171,7 @@ Math - built in object that provides a collection of properties and methods
 // z=Math.ceil(x) //, Rounds up always
 // console.log(z)
 
-// z=Math.trunc(x) //, Truncates the dicimal part
+// z=Math.trunc(x) //, Truncates the decimal part
 // console.log(z)
 
 // z=Math.pow(x, y) //, raises x to power y
@@ -214,3 +214,164 @@ Math - built in object that provides a collection of properties and methods
 // let min = Math.min(x, y, z);
 // console.log(max)
 // console.log(min)
+
+
+
+//! Random number generator
+// let randomNum = Math.ceil(Math.random() * 6) //, We multiply the number by 6 to get numbers with a max value of 6. it is useful when genrating numbers for a dice roll
+// console.log(randomNum)
+
+
+//.When I want numbers within a certain range;
+// const min = 50;
+// const max = 100;
+
+// let randomNum = Math.ceil(Math.random() * (max-min)) + min;
+
+// console.log(randomNum)
+
+
+
+//!if statements
+// if a condition is true, execute some code, if not, do something else
+// let age = 2;
+// if(age>= 18) {
+//     console.log("You are old enough to enter this site")
+// }
+// else {
+//     console.log(" You must be 18+ to enter this site")
+// }
+
+
+//. Using booleans
+// let isStudent = false;
+
+// if (isStudent) {
+//    console.log("You are a student");
+// }
+// else {
+//     console.log("You are not a student")
+// }
+
+// let age = 20;
+// let hasLicence = false;
+
+// if(age>= 18) {
+//     console.log("You are old enough to drive")
+//     if (hasLicence) {
+//         console.log("You have a licence")
+//     }
+//     else{
+//         console.log("You do not have a licence")
+//     }
+// }
+// else{
+//     console.log("You must me 16+ to have a licence")
+// }
+
+
+//.else...if statements
+// let age = 0
+// if (age >= 100) {
+//     console.log("You too old to enter this site")
+// }
+// else if (age == 0){
+//     console.log("You cant enter. You were just born!")
+// }
+// else if (age<0){
+//     console.log("Kindly be serious, how is your age below 0!")
+// }
+// else if (age >= 18) {
+//     console.log("You are old enough to enter this site")
+// }
+// else{
+//     console.log(" You are not old enough to enter this site")
+// }
+
+
+
+//! Ternary operator
+/*
+Ternary operator - a shortcut to if{} and else {} statements
+Helps to assign a variable based on  a condition 
+condition ? codeIfTrue : codeIfFalse;
+*/
+
+// let age = 2;
+// let message = age >= 18 ? "You are an adult" : "You are a minor";
+
+// console.log(message);
+
+// let time = 16;
+// let greeting = time < 12 ? "Good morning!" : "Good afternoon!";
+// console.log(greeting)
+
+// let isStudent = false;
+// let message = isStudent ? "You are a student" : "You are not a student"
+// console.log(message)
+
+// let purchaseAmount = 99
+// let discount = purchaseAmount >= 100 ? 10 : 0;
+// console.log (`Your total is $${purchaseAmount - purchaseAmount * (discount/100)}`);
+
+
+
+//! SWITCH statement
+//Efficient replacement to many else if statements
+// let day = 9;
+
+// switch(day) {
+//     case 1:
+//         console.log("It is Monday");
+//         break;
+//     case 2:
+//         console.log("It is Tuesday");
+//         break;
+//     case 3:
+//         console.log("It is Wednesday");
+//         break;
+//     case 4:
+//         console.log("It is Thursday");
+//         break;
+//     case 5:
+//         console.log("It is Friday");
+//         break;
+//     case 6:
+//         console.log("It is Saturday");
+//         break;
+//     case 7:
+//         console.log("It is Sunday");
+//         break;
+//     default:
+//         console.log(`${day} is not a day`);
+// }
+//, break breaks out of the switvh once a condition has been met
+
+// let testScore = 2;
+// let letterGrade;
+
+// switch(true){
+//     case testScore >= 90:
+//         letterGrade = "A";
+//         break;
+//     case testScore >= 80:
+//         letterGrade = "B";
+//         break;
+//     case testScore >= 70:
+//         letterGrade = "C";
+//         break;
+//     case testScore >= 60:
+//         letterGrade = "D";
+//         break;
+//     default:
+//        letterGrade = "F" 
+// }
+
+// console.log(letterGrade)
+
+
+
+//! string methods
+/*
+- Allows one to work with text(strings)
+*/
