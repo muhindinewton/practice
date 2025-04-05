@@ -375,3 +375,362 @@ condition ? codeIfTrue : codeIfFalse;
 /*
 - Allows one to work with text(strings)
 */
+// let userName = "Muhindi";
+
+// console.log(userName.charAt(0)); //, Gets the first character of the string
+
+// console.log(userName.indexOf("i")) //, Shows the index of the first appearance of the character
+
+// console.log(userName.lastIndexOf("i")) //, Shows the index of the last appearance of the character
+
+// console.log(userName.length) //, Shows the length of a string
+
+//. .trim()
+// removes whitespace from both ends of this string and returns a new string, without modifying the original string.
+
+// let userName = "   Kamau   "
+// userName = userName.trim();
+// console.log(userName)
+
+//. .toUpperCase()
+// userName = userName.toUpperCase();
+// console.log(userName)
+
+//. .toLowercase()
+// userName  = userName.toLowerCase();
+// console.log(userName)
+
+//. .repeat();
+// userName = userName.repeat(3)
+// console.log(userName)
+
+//. .startsWith()
+// let userName = " Njoroge"
+// let result = userName.startsWith(" ")
+
+// console.log(result)
+
+// if (result) {
+//     console.log("Your username cant begin with ' '");
+// }
+// else {
+//     console.log(userName)
+// }
+
+//. .endsWith()
+// let userName = " Njoroge "
+// let result = userName.endsWith(" ")
+
+// console.log(result)
+
+// if (result) {
+//     console.log("Your username cant end with ' '");
+// }
+// else {
+//     console.log(userName)
+// }
+
+//. includes()
+// let userName = "Njoroge"
+// let result = userName.includes(" ")
+
+// console.log(result)
+
+// if (result) {
+//     console.log("Your username cant include ' '");
+// }
+// else {
+//     console.log(userName)
+// }
+
+//. replaceAll()
+// let phoneNumber = "123-456-789"
+
+// phoneNumber = phoneNumber.replaceAll("-", "");
+
+// console.log(phoneNumber)
+
+//. padStart()
+// let phoneNumber = "795482911"
+
+// phoneNumber = phoneNumber.padStart(10, "0");
+// //, 10 specifies the number of characters i want my string to have
+// //, "0" specifies the character i want to add at the front to make my string the required length.
+
+// console.log(phoneNumber)
+
+//. .padEnd()
+// let phoneNumber = "795482911"
+
+// phoneNumber = phoneNumber.padEnd(10, "0");
+// //, 10 specifies the number of characters i want my string to have
+// //, "0" specifies the character i want to add at the end to make my string the required length.
+
+// console.log(phoneNumber)
+
+
+
+//! String slicing
+/*
+- String slicing is creating a substring from a portion of another string
+*/
+// const fullName = "Newton Muhindi"
+
+// let firstName = fullName.slice(0, 6); //, ending index is exclusive
+// let lastName = fullName.slice(7, 14);
+
+// let firstChar = fullName.slice(0, 1);
+// let lastChar = fullName.slice(-1)
+
+// console.log(firstName)
+// console.log(lastName)
+// console.log(firstChar)
+// console.log(lastChar)
+
+//, Works only for the instance of the the specific name. if you alter, you have to change indexes
+//, To make it more dynamic, we combine it with indexof()
+
+// const fullName = "Newton Muhindi"
+
+// let firstName = fullName.slice(0, fullName.indexOf(" "));
+// let lastName = fullName.slice(fullName.indexOf(" ") + 1); //, +1 removes empy space before M
+
+// let firstChar = fullName.slice(0, 1);
+// let lastChar = fullName.slice(-1)
+
+// console.log(firstName)
+// console.log(lastName)
+// console.log(firstChar)
+// console.log(lastChar)
+
+// const email = "muhindi1970@gmail.com"
+
+// let username = email.slice(0, email.indexOf("@"));
+// let extension = email.slice(email.indexOf("@") + 1);
+
+// console.log(username)
+// console.log(extension)
+
+
+
+//! Method chaining
+/*
+- Method Chaining is calling one method after another in one continuous line of code
+*/
+
+// ---------- NO METHOD CHAINING ----------
+// let username = window.prompt ("Enter your username: ")
+//, when the user types in their username, I want to trim any whitespaces, make the first character upperCase and make all the other characters lowercase
+
+// username = username.trim();
+// let letter=username.charAt(0);
+// letter = letter.toUpperCase();
+
+// let extraChars = username.slice(1);
+// extraChars = extraChars.toLowerCase();
+// username = letter + extraChars;
+// console.log (username);
+
+// ---------- METHOD CHAINING ----------
+// username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+// console.log(username)
+
+
+
+//! Logical Operators
+/*
+- Logical operators are used to combine or manipulate boolean values (true, false)
+    AND = &&
+    OR = ||
+    NOT = !
+*/
+
+//. AND = &&
+// const temp = 0;
+// if (temp > 0 && temp <=30) {
+//     console.log("The weather is GOOD");
+// }
+// //, To execute above if statement, both conditions need to be true
+// else {
+//     console.log("The weather is BAD");
+// }
+
+//. OR = ||
+// const temp = 20;
+// if (temp <= 0 || temp > 30) {
+//     console.log("Weather is BAD")
+// }
+// //, To execute if one condition is truw
+// else {
+//     console.log("Weather is GOOD")
+// }
+
+//. NOT = !
+// const isSunny = false;
+// if (!isSunny) {
+//     console.log("It is cloudy")
+// }
+// else {
+//     console.log("It is sunny")
+// }
+
+
+
+//! Strictly equality operator (===)
+/*
+- = assignment operator
+- == comparison operator (compare if values are equal)
+- === strictly equality operator (compare if values & datatype are equal)
+- != inequality operator
+- !== strictly inequality operator
+*/
+
+//. === (Strictly inequality operator)
+// const PI = 3.14;
+// if (PI === "3.14") {
+//     console.log("That is Pi")
+// }
+// else {
+//     console.log ("That is not PI")
+// }
+//, Whereas == checks if values are equal, === checks both values are equal, ie, a string can only be equal to string, a number to a number etc.
+
+//. != (inequality opearator)
+// Returns true when two values and data types are not equal
+// const PI = 3.14;
+// if (PI !== "3.14") {
+//     console.log("That is NOT Pi")
+// }
+// else {
+//     console.log ("That is PI")
+// }
+
+
+
+//! while loop
+// Repeat some code while some condition is true
+
+// let username = "";
+
+// while(username === "" || username === null) {
+//     username = window.prompt(`Enter your name`)
+// }
+
+// console.log(`Hello ${username}`)
+
+//. do while loop
+// let username;
+// do{
+//     username = window.prompt(`Enter your name: `)
+// } while(username === "" || null);
+
+// console.log(`Hello ${username}`)
+
+// let loggedIn = true;
+// let username;
+// let password;
+
+// while(!loggedIn) {
+//     username = window.prompt("Enter your username");
+//     password = window.prompt("Enter your password")
+
+//     if(username === "myUsername" && password === "myPassword") {
+//         loggedIn = true;
+//         console.log("You are logged in")
+//     }
+//     else{
+//         console.log("Invalid credentials! Please try again")
+//     }
+// }
+
+//. for loop
+// repeat some code a limited amount of times
+// for(let i = 2; i <= 10; i+=2) {
+//     console.log(i)
+// }
+// console.log("Hurray")
+
+// for(let i = 10; i >= 0; i-=2) {
+//     console.log(i)
+// }
+// console.log("Happy New year")
+
+// for(let i = 1; i <= 20; i++){
+//     if(i == 13){
+//         continue;
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+// for(let i = 1; i <= 20; i++){
+//     if(i == 13){
+//         break;
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+
+
+//! Functions
+/*
+- A function is a section of reusable code.
+- You declare the code once, and you use it whenever you want.
+- You call the function to execute that code.
+*/
+
+// function happyBirthday () { //, happyBirthday() is the function amd it iss the one we will call
+//     console.log("Happy birthday Kangethe")
+//     console.log("Happy birthday Kamande")
+// }
+
+// happyBirthday();
+// happyBirthday();
+
+//. Using parameters in declaring functions
+// function happyBirthday (username, age) { //, username and age are parameters. order matters
+//     console.log("Happy birthday to you")
+//     console.log(`Happy birthday ${username}`)
+//     console.log(`You are ${age} years old`)
+// }
+
+// happyBirthday("Kamau", 25); //, Kamau and 25 are arguments
+// happyBirthday("Kangethe", 30)
+// //, You can have different arguments for same parameters
+
+//. use of the return keyword
+// function add (x, y) {
+//    let result = x + y;
+//    return result; //, when you return something from a function, after you resolve the function,think of it like becoming whatever you have returned. 
+// }
+// console.log (add (2,3))
+
+// can also be written as below:
+// function add (x, y) {
+//     return x + y;
+//  }
+//  console.log (add (2,3))
+
+//> Example. a function to determine whether number is even or odd
+// function isEven (number) {
+//     return number % 2 === 0 ? true : false
+// }
+// console.log (isEven(7))
+
+//>Example. a function to check if email is valid
+// function isValidEmail(email) {
+//     if (email.includes("@")){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// console.log(isValidEmail("muhindi1970@gmail.com"))
+
+
+
+//! Variable scope
