@@ -734,3 +734,36 @@ condition ? codeIfTrue : codeIfFalse;
 
 
 //! Variable scope
+// - This is where a variable is recognized and accessible(local vs global)
+
+// let y = 3;
+// let y = 4;
+//, Each variable name has to be unique in the same scope
+
+// function function1() {
+//     let x = 1; //, Any variable declared inside a function has a local scope
+//     console.log(x)
+// }
+
+// function function2() {
+//     let x = 2;
+//     console.log(x)
+// }
+
+// function1();
+// function2()
+//, You can reuse the same variable names as long as they are within different scopes.
+
+//A global scope for a varable is any variable declared outside a function
+// let x = 3;
+
+// function function1() {
+//     console.log(x)
+// }
+
+// function function2() {
+//     console.log(x)
+// }
+// function1()
+// function2()
+//, is a global scope. It is recognized and accessible from anywhere

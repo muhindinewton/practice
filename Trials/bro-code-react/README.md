@@ -1,0 +1,5 @@
+- React is a JS framework that is used to easily build and arrange user interface for web applications.
+- Focuses on building a web application using components
+- A component is a self contained section of codee that functions as a reusable building block.
+- it uses a syntax extension of JavaScript known as JSX (JavaScript XML). It allows you to write html code within my JS file.
+- React also utilizes a virtual dom
