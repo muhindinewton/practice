@@ -9,6 +9,7 @@ function App() {
       <h1>Introduction to React</h1>
       <>
       <Welcome name="Njoroge"/>
+      <Welcome name="Kamau"/>
       </>
 
     </div>
