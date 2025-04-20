@@ -1,6 +1,6 @@
 import profilePic from './assets/profile.jpeg'
 
-function Card () {
+function Card (props) {
     return(
         <div className="card">
             <img className='card-image' src={profilePic} alt="profile picture" />

@@ -1,0 +1,2 @@
+prop drilling
+react context - created within the root component

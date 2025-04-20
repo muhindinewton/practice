@@ -12,7 +12,8 @@ function App() {
       <Student name='Njoroge' age = {42} isStudent = {false}/> 
       <Student name='Mwaniki' age = {50} isStudent = {false}/> 
       <Student name='Waiganjo' age = {27} isStudent = {true}/> 
-      <Student />
+      <Student name='Waiganjo' age = {27} isStudent = {true}/>
+      <Student name='Mwangi' age = {70} isStudent = {true}/>
     </>
   )
 }

@@ -1,0 +1,76 @@
+/* General Layout */
+body {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem; /* Equivalent to px-4 */
+}
+
+/* Logo styles */
+.logo-container {
+  display: flex;
+  gap: 1.5rem; /* Equivalent to gap-6 */
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+  justify-content: center;
+}
+
+.logo {
+  width: 5rem; /* Equivalent to w-20 */
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Equivalent to hover:scale-110 */
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.25rem; /* Equivalent to text-4xl */
+  font-weight: 700; /* Equivalent to font-bold */
+  color: #1f2937; /* Equivalent to text-gray-800 */
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem; /* Equivalent to rounded-xl */
+  padding: 1.5rem; /* Equivalent to p-6 */
+  width: 100%;
+  max-width: 24rem; /* Equivalent to max-w-md */
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  background-color: #2563eb; /* Equivalent to bg-blue-600 */
+  color: white;
+  font-weight: 600; /* Equivalent to font-semibold */
+  padding: 0.75rem 1.5rem; /* Equivalent to py-3 px-6 */
+  border-radius: 0.75rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow */
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+button:hover {
+  background-color: #1e40af; /* Equivalent to hover:bg-blue-700 */
+}
+
+/* Paragraph text */
+p {
+  color: #374151; /* Equivalent to text-gray-700 */
+}
+
+code {
+  background-color: #e5e7eb; /* Equivalent to bg-gray-200 */
+  padding: 0.25rem 0.5rem; /* Equivalent to px-1 py-0.5 */
+  border-radius: 0.25rem; /* Equivalent to rounded */
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}

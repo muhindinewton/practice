@@ -24,4 +24,5 @@ UserGreeting.defaultProps = {
     isLoggedIn: false,
     username: "Guest"
 }
+
 export default UserGreeting

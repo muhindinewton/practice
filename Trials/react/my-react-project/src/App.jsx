@@ -1,6 +1,9 @@
 
 import './App.css'
 import Welcome from './components/Welcome.jsx'
+import {useContext, createContext} from 'react'; 
+
+const userContext = createContext()
 
 function App() {
 
