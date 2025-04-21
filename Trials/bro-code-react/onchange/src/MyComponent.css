@@ -1,0 +1,57 @@
+/* MyComponent.css */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container input[type="text"],
+  .container input[type="number"],
+  .container textarea,
+  .container select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .container input[type="text"]:focus,
+  .container input[type="number"]:focus,
+  .container textarea:focus,
+  .container select:focus {
+    border-color: #5b9df9;
+    outline: none;
+  }
+  
+  .container label {
+    font-weight: 500;
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .container p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 20px;
+  }
+  
+  .container input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  

@@ -1,0 +1,38 @@
+/* counter.css */
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.count-display {
+  font-size: 10rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #1e293b; /* dark slate */
+}
+
+.counter-button {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.counter-button:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.counter-button:active {
+  background-color: #1e40af; /* blue-800 */
+}
