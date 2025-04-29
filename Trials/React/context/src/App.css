@@ -1,0 +1,76 @@
+/* App container styles */
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #3a3a3a;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.color-button:hover {
+  background: #2563eb;
+}
+
+.color-button-red {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 8px 0;
+}
+
+.color-button-red:hover {
+  background:#780101;
+}
+
+.color-button-green {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #00ff00;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 8px 0;
+}
+
+.color-button-green:hover {
+  background:#015f0f;
+}
+
+.color-button-blue {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #0000ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 8px 0;
+}
+
+.color-button-blue:hover {
+  background:#010178;
+}
