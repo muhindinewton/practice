@@ -1,0 +1,1 @@
+ALTER TABLE cats ADD COLUMN color TEXT;

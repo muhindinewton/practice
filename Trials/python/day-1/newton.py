@@ -1,10 +1,9 @@
-class Human:
-    species = "Homo sapiens"
-    def __init__(self, name):
-        self.name = name
-        
-guido = Human("Guido")
-print (guido.species)
-# => Homo sapiens
-Human.species
-# => Homo sapiens
+thisset = {"apple", 12, True}
+for x in thisset:
+    print(x)
+
+thisset.add("orange")
+thisset.remove("apple")
+print(thisset)
+
+    
