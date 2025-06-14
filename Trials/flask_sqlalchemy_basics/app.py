@@ -10,20 +10,31 @@ db=SQLAlchemy(app)
 
 class Customer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.string(50), nullable=False)
-    address = db.Column(db.string(500), nullable=False)
-    city = db.Column(db.string(50), nullable=False)
-    postcode = db.Column(db.string(50), nullable=False)
-    email = db.Column(db.string(50), nullable=False, unique=True)
+    first_name = db.Column(db.String(50), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    address = db.Column(db.String(500), nullable=False)
+    city = db.Column(db.String(50), nullable=False)
+    postcode = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(50), nullable=False, unique=True)
+    
+    orders = db.relationship('Order', backref='customer')
+    
+order_product = db.Table('order_product',
+    db.Column('order_id', db.Integer, db.ForeignKey('order.id'), primary_key = True),
+    db.Column('product_id', db.Integer, db.ForeignKey('product.id'), primary_key = True)                        
+)
 
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     order_dat = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     ship_date = db.Column(db.DateTime)
     deliver_date = db.Column(db.DateTime)
-    coupon_code = db.Column(db.string(50))
+    coupon_code = db.Column(db.String(50))
+    customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable = False)
+    
+    products = db.relationship('Product', secondary=order_product)
 
-class Product(db.model):
+class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.string(100), nullable = False, unique = True)
+    name = db.Column(db.String(100), nullable = False, unique = True)
     price = db.Column(db.Integer, nullable = False)
